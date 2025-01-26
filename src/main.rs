@@ -9,11 +9,8 @@ mod routes;
 
 use routes::user_routes::*;
 
-use crate::constants::constants::MONGO_URI;
-
 #[get("/")]
 fn index() -> &'static str {
-    println!("Lazyyyyy keyyyyy: {}", MONGO_URI.to_string());
     "Hello, Rocket API!"
 }
 
