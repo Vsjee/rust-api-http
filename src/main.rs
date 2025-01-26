@@ -2,11 +2,10 @@
 extern crate rocket;
 
 use dotenv::dotenv;
-// use std::env;
 
+mod constants;
 mod models;
 mod routes;
-mod constants;
 
 use routes::user_routes::*;
 
@@ -14,11 +13,7 @@ use crate::constants::constants::MONGO_URI;
 
 #[get("/")]
 fn index() -> &'static str {
-    // let key = env::var("MONGO_DB_STRING_CONNECTION").expect("KEY must be set");
-    // println!("Using API key: {}", key);
-
     println!("Lazyyyyy keyyyyy: {}", MONGO_URI.to_string());
-
     "Hello, Rocket API!"
 }
 
