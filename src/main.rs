@@ -1,11 +1,6 @@
 #[macro_use]
 extern crate rocket;
 
-use mongodb::{
-    bson::{doc, Document},
-    Collection,
-};
-
 use dotenv::dotenv;
 
 mod conf;
